@@ -1,3 +1,11 @@
+/* header / nav */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* css de la bannière + animation  */
 .banner-container {
     position: relative;
     height: 700px;
@@ -18,7 +26,7 @@ img.canette {
     left: 29%;
     transform: translateX(-50%); 
 }
-
+/* animation de la banniere */
 .slideInLeft {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
