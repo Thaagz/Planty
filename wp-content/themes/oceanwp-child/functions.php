@@ -72,7 +72,7 @@ function order_custom_post_type() {
 		'public'              => true,
 		'has_archive'         => true,
 		'rewrite'			  => array( 'slug' => 'orders'),
-
+		'menu_icon'           =>'dashicons-cart'
 	);
 	
 	// On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
@@ -81,3 +81,51 @@ function order_custom_post_type() {
 }
 
 add_action( 'init', 'order_custom_post_type', 0 );
+
+function form_custom_post_type() {
+
+	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
+	$labels = array(
+		// Le nom au pluriel
+		'name'                => _x( 'Les formuaires', 'Post Type General Name'),
+		// Le nom au singulier
+		'singular_name'       => _x( 'formulaire', 'Post Type Singular Name'),
+		// Le libellé affiché dans le menu
+		'menu_name'           => __( 'Formulaire'),
+		// Les différents libellés de l'administration
+		'all_items'           => __( 'Toutes les formulaires'),
+		'view_item'           => __( 'Voir les formulaires'),
+		'add_new_item'        => __( 'Ajouter un nouveau formuaire'),
+		'add_new'             => __( 'Ajouter'),
+		'edit_item'           => __( 'Editer le formulaire'),
+		'update_item'         => __( 'Modifier le formulaire'),
+		'search_items'        => __( 'Rechercher un formulaire'),
+		'not_found'           => __( 'Non trouvée'),
+		'not_found_in_trash'  => __( 'Non trouvée dans la corbeille'),
+	);
+	
+	// On peut définir ici d'autres options pour notre custom post type
+	
+	$args = array(
+		'label'               => __( 'Formulaires'),
+		'description'         => __( 'Liste des formulaires'),
+		'labels'              => $labels,
+		// On définit les options disponibles dans l'éditeur de notre custom post type ( un titre, un auteur...)
+		'supports'            => array( 'title', 'custom-fields', ),
+		/* 
+		* Différentes options supplémentaires
+		*/
+		'show_in_rest'        => true,
+		'hierarchical'        => false,
+		'public'              => true,
+		'has_archive'         => true,
+		'rewrite'			  => array( 'slug' => 'form'),
+		'menu_icon'           =>'dashicons-dashboard'
+	);
+	
+	// On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
+	register_post_type( 'form', $args );
+
+}
+
+add_action( 'init', 'form_custom_post_type', 0 );
