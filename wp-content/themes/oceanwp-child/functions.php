@@ -1,4 +1,16 @@
 <?php
+
+// require '/shortcode/banner.php';
+require __DIR__. '/shortcode/banner.php';
+// require '/shortcode/plante-contacter.php';
+require __DIR__. '/shortcode/plante-contacter.php';
+// require '/shortcode/plant-rencontrer.php';
+require __DIR__. '/shortcode/plante-rencontrer.php';
+// require '/shortcode/plant-droite.php';
+require __DIR__. '/shortcode/plante-droite.php';
+// require '/shortcode/commande.php';
+require __DIR__. '/shortcode/commande.php';
+
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
@@ -24,9 +36,6 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 // END ENQUEUE PARENT ACTION
 
 // shortcode
-
-// require '/shortcode/banner.php';
-require __DIR__. '/shortcode/banner.php';
 
 // CPT
 
@@ -129,3 +138,17 @@ function form_custom_post_type() {
 }
 
 add_action( 'init', 'form_custom_post_type', 0 );
+
+// helper
+// la variable est egal a true ?
+
+function dv($display) {
+	if (!$display) {return false;}
+
+	if (is_array($display)) {
+		if(count($display)>0) {
+			echo '<img loading="lazy" src="' .$display["url"]. '" alt="' .$display["title"]. '">';
+		}
+	}
+	else {echo $display;}
+}

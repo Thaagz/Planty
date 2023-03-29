@@ -5,7 +5,7 @@ header {
     justify-content: space-between;
 }
 
-/* css de la bannière + animation  */
+/******************************** css de la bannière + animation  *********************************/
 .banner-container {
     position: relative;
     height: 700px;
@@ -26,7 +26,7 @@ img.canette {
     left: 29%;
     transform: translateX(-50%); 
 }
-/* animation de la banniere */
+/********************************* animation de la banniere *********************************/
 .slideInLeft {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
@@ -119,3 +119,179 @@ img.canette {
     transform: translateY(0);
     }
     } 
+
+/********************************* décoration plante page de contacte *********************************/
+
+.planteRencontrer {
+    position: absolute;
+    left: -199px;
+    width: 153.3px;
+    height: 149.26px;
+    top: -72px;
+}
+
+.planteContacter {
+    /* left et top temporaire */
+    position: absolute;
+    left: 290px;
+    top: 125px;
+    width: 147.32px;
+    height: 134.97px;
+}
+
+.planteDroite {
+    position: absolute;
+    width: 191.21px;
+    height: 219.08px;
+    bottom: -87px;
+    left: 945px;
+}
+
+/********************************* page de commande *********************************/
+
+.commande-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.informations-Livraison {
+    display: flex;
+    flex-direction: row;
+}
+
+button .order {
+    align-items: center;
+}
+
+label, h2 {
+    color: blue;
+}
+
+.order-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* header icon */
+.left-nav img {
+    width: 200px;
+    height: 40px;
+}
+
+/* header nav */
+.site-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 79px;
+}
+
+/* header ul container */
+.primary-menu {
+    display: flex;
+    flex-direction: row;
+    font-family: "Syne", sans-serif;
+}
+
+#menu-item-224 a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: black;
+}
+
+#menu-item-223 a {
+    color: white;
+    background-color: #DC9F96;
+    padding: 30px 60px 30px 60px;
+    margin-left: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+li {
+    list-style-type: none;
+}
+
+/********************************* footer *********************************/
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu-footer li a {
+    padding-left: 10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.commande-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.img-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img-text-container img {
+    width: 192.53px;
+    height: 128.36px;
+}
+
+.img-text-container p {
+    position: absolute;
+    color: white;
+    margin: 0;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "syne", sans-serif;
+}
