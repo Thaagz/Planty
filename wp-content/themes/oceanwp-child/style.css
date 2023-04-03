@@ -1,8 +1,55 @@
-/* header / nav */
+/******************************** header / nav ********************************/
 
 header {
     display: flex;
     justify-content: space-between;
+}
+
+/* header icon */
+.left-nav img {
+    width: 200px;
+    height: 40px;
+}
+
+/* header nav */
+.site-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 77px;
+}
+
+/* header ul container */
+.primary-menu {
+    display: flex;
+    flex-direction: row;
+    font-family: "Syne", sans-serif;
+}
+
+/* nav "nous rencontrer" */
+#menu-item-224 a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: black;
+}
+
+/* nav "commander */
+#menu-item-223 a {
+    color: white;
+    background-color: #DC9F96;
+    padding: 30px 60px 30px 60px;
+    margin-left: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+li {
+    list-style-type: none;
 }
 
 /******************************** css de la bannière + animation  *********************************/
@@ -120,7 +167,7 @@ img.canette {
     }
     } 
 
-/********************************* décoration plante page de contacte *********************************/
+/********************************* décoration plante page de contacte (shortcode) *********************************/
 
 .planteRencontrer {
     position: absolute;
@@ -131,10 +178,9 @@ img.canette {
 }
 
 .planteContacter {
-    /* left et top temporaire */
     position: absolute;
-    left: 290px;
-    top: 125px;
+    left: -69px;
+    top: 520px;
     width: 147.32px;
     height: 134.97px;
 }
@@ -144,127 +190,10 @@ img.canette {
     width: 191.21px;
     height: 219.08px;
     bottom: -87px;
-    left: 945px;
+    left: 98%
 }
 
 /********************************* page de commande *********************************/
-
-.commande-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.informations-Livraison {
-    display: flex;
-    flex-direction: row;
-}
-
-button .order {
-    align-items: center;
-}
-
-label, h2 {
-    color: blue;
-}
-
-.order-title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-}
-
-label {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-}
-
-/* header icon */
-.left-nav img {
-    width: 200px;
-    height: 40px;
-}
-
-/* header nav */
-.site-navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 40px;
-    height: 79px;
-}
-
-/* header ul container */
-.primary-menu {
-    display: flex;
-    flex-direction: row;
-    font-family: "Syne", sans-serif;
-}
-
-#menu-item-224 a {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19.2px;
-    color: black;
-}
-
-#menu-item-223 a {
-    color: white;
-    background-color: #DC9F96;
-    padding: 30px 60px 30px 60px;
-    margin-left: 60px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19.2px;
-}
-
-li {
-    list-style-type: none;
-}
-
-/********************************* footer *********************************/
-
-.menu-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.menu-footer li a {
-    padding-left: 10px;
-    font-family: 'Syne', sans-serif;
-    font-size: 16px;
-    line-height: 19.2px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .commande-container {
     display: flex;
@@ -278,7 +207,6 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .img-text-container img {
@@ -294,4 +222,159 @@ li {
     font-size: 20px;
     line-height: 24px;
     font-family: "syne", sans-serif;
+}
+
+/* titre form precommande (votre commande / vos informations / livraison) */
+.form-title {
+    color: white;
+    font-family: "syne", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 45px 0 35px 0px;
+}
+
+/* typographie label */
+.informations-Livraison label {
+    color: white;
+    font-family: "syne", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+/* visuel input text */
+.informations-Livraison input[type=text] {
+    background-color: white;
+    border-radius: 7px;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* visuel input email */
+.informations-Livraison input[type=mail] {
+    min-height: 40px;
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    border-radius: 7px;
+    height: 70px;
+    width: 100%;
+}
+
+.informations-Livraison {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.informations form {
+    display: flex;
+    flex-direction: column;
+}
+
+.informations{
+    width: 380px;
+}
+
+.livraison form {
+    display: flex;
+    flex-direction: column;
+}
+
+.livraison {
+    width: 380px;
+}
+
+.order_button {
+    width: 200px;
+    height: 55px;
+    background-color: #E0B9B4 !important;
+    border-radius: 5px;
+    margin: 15px 50% 0 50% !important;
+    transform: translateX(-50%);
+}
+
+input[type="submit"]:hover {
+    background-color: #C02E44 !important;
+}
+
+/* visuel message de confimation/probleme dans la commande */
+.order-confirmation {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.order-confirmation p {
+    font-family: "syne", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+    margin-top: 20px;
+}
+/********************************* formulaire "nous contacter" *********************************/
+
+/* typographie label */
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+    color: black;
+    font-family: "syne", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 13px;
+}
+
+/* visuel input text/email/textarea */
+div.wpforms-container-full .wpforms-form input[type=email],
+div.wpforms-container-full .wpforms-form input[type=text],   
+div.wpforms-container-full .wpforms-form textarea {
+    height: 70px;
+    border-radius: 7px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+    margin-bottom: 22px;
+}
+
+/* rendre invisible le * a coter des champs obligatoire */
+.wpforms-form .wpforms-required-label {
+    color: #ECE2DA !important;
+}
+
+/* visuel bouton submit */
+#wpforms-submit-164 {     
+    width: 200px;     
+    height: 55px;     
+    background-color: #E0B9B4 !important;     
+    border-radius: 5px;     
+    margin: 0px 50% 0 50% !important;     
+    transform: translateX(-50%);  
+}
+
+/* hover bouton sumbit */
+#wpforms-submit-164:hover {
+    background-color: #C02E44 !important;
+}
+
+/********************************* footer *********************************/
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu-footer li a {
+    padding-left: 10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    line-height: 19.2px;
 }

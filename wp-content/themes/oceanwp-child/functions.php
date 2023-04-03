@@ -152,3 +152,43 @@ function dv($display) {
 	}
 	else {echo $display;}
 }
+
+function createOrder($data) {
+	// get data from form
+	$fraise = $data['fraise'];
+	$pamplemousse = $data['pamplemousse'];
+	$framboise = $data['framboise'];
+	$citron = $data['citron'];
+	$nom = $data['nom'];
+	$prenom = $data['prenom'];
+	$email = $data['email'];
+	$adresseLivraison = $data['adresse'];
+	$codepostal = $data['code_postal'];
+	$ville = $data['ville'];
+
+	date_default_timezone_set('Europe/Paris');
+	$date = date('d/m/Y h:i', time());
+
+	// insert post in 'orders' CPT
+	$id = wp_insert_post(array(
+		'post_title'=> $prenom . ' ' . $nom . ' - ' . $date, 
+		'post_type'=>'orders', 
+		'post_content'=>''
+	  ));
+
+	if (!$id) { return $id; }
+	update_field('fraise', $fraise, $id);
+	update_field('pamplemousse', $pamplemousse, $id);
+	update_field('framboise', $framboise, $id);
+	update_field('citron', $citron, $id);
+
+	update_field('nom', $nom, $id);
+	update_field('prenom', $prenom, $id);
+	update_field('e-mail', $email, $id);
+
+	update_field('adresse_de_livraison', $adresseLivraison, $id);
+	update_field('code_postal', $codepostal, $id);
+	update_field('ville', $ville, $id);
+
+	return $id;
+}
