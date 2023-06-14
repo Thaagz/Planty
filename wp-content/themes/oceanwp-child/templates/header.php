@@ -9,13 +9,12 @@ $logo = get_custom_logo();
             <?php echo $logo; ?>
         </div>
         <?php wp_nav_menu(array(
-            'menu' => 'primary',
+            'menu' => MENU,
             'container' => 'ul',
             'menu_id' => 'primary',
             'menu_class' => 'primary-menu'
             )
         );
         ?>
-
     </nav>
 </div>

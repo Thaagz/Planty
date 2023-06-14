@@ -1,0 +1,206 @@
+@media (max-width: 1449px) {
+    /* section "les gouts" */
+    .elementor-11 .elementor-element.elementor-element-5d7af05 {
+        padding: 0 !important;
+    }
+    .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+        padding: 0 !important;
+    }
+    .elementor-11 .elementor-element.elementor-element-5a34402 > .elementor-element-populated, .elementor-11 .elementor-element.elementor-element-794dc6d > .elementor-element-populated, .elementor-11 .elementor-element.elementor-element-19ad4f3 > .elementor-element-populated, .elementor-11 .elementor-element.elementor-element-4b5fbb9 > .elementor-element-populated {
+        margin: 0 30px !important;
+    }
+    .banner-container {
+        height: 600px;
+    }
+    .elementor-container .elementor-column-gap-default, .elementor-container .elementor-column-gap-default {
+        display: flex;
+        justify-content: center;
+    }
+    /* texte gout 1 a 4*/
+    .texte-gout h2 {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        line-height: 30px !important;
+        padding: 40px 40px;
+    }
+    .elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap {
+        align-content: center;
+    }
+    .elementor-element-19ad4f3, .elementor-element-4b5fbb9, .elementor-element-794dc6d, .elementor-element-5a34402 {
+        max-width: 450px;
+        max-height: 110px;
+    }
+    .elementor-element-5a34402, .elementor-element-4b5fbb9, .elementor-element-19ad4f3{
+        margin-bottom: 20px;
+    }
+    /* gout 1 */
+    .elementor-11 .elementor-element.elementor-element-5a34402 > .elementor-element-populated {
+        margin: 0 10px 15px;
+        padding: 70px 0;
+    }
+    /* gout 2 */
+    .elementor-11 .elementor-element.elementor-element-794dc6d > .elementor-element-populated {
+        padding: 50px 0;
+        margin: 0 10px 15px;
+    }
+    /* gout 3 */
+    .elementor-11 .elementor-element.elementor-element-19ad4f3 > .elementor-element-populated {
+        padding: 0px;
+        margin: 0 10px 15px;
+    }
+    /* gout 4 */
+    .elementor-11 .elementor-element.elementor-element-4b5fbb9 > .elementor-element-populated {
+        padding: 0;
+        margin: 0 10px 15px;
+    }
+    /* separateur entre gout 1/2 et 3/4 */
+    .elementor-11 .elementor-element.elementor-element-e9fcf88 {
+        margin-bottom: 20px !important;
+    }
+
+    /* page de commande */
+    .commande-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .produit {
+        margin: 0 5px 50px 5px;
+    }
+    .bordure-vertical {
+        display: none;
+    }
+    .informations-Livraison {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .informations, .livraison {
+        margin: 0 10px;
+    }
+    .order {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+    .order-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .order_button {
+        margin: 0 auto;
+    }
+
+    /* confirmation de commande  */
+    .order-confirmation {
+        width: 100%;
+    }
+    .order-confirmation p {
+        font-size: 17px;
+    }
+    /* bouton formulaire de contatce */
+    .wpforms-submit-container {
+        display: flex;
+    }
+    #wpforms-submit-164 {
+        margin: 0 auto;
+        padding: 20px 65px;
+    }
+    .bordure-horizontal {
+        position: inherit;
+        margin: 25px auto 0 !important;
+        left: 0 !important;
+    }
+    /* ce qu'ils en pensent */
+    .name-review h3 {
+        margin-top: 15px;
+    }
+    .text-review p {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+    /* page nous rencontrer  */
+    .elementor-13 .elementor-element.elementor-element-336ad24 > .elementor-element-populated {
+        margin: 0 !important;
+    }
+    .planteDroite {
+        display: none;
+    }
+}
+
+@media (max-width: 781px) {
+    /* header/nav */
+    #menu-item-223 a {
+        padding: 30px 30px;
+        margin-left: 20px;
+    }
+
+    #menu-item-id a {
+        margin-left: 20px;
+    }
+    .elementor-11 .elementor-element.elementor-element-db142b1 > .elementor-widget-container {
+        margin: 30px 0 0 0 !important;
+    }
+    .plante {
+        overflow: hidden;
+    }
+}
+@media (max-width: 651px) {
+    /* header/nav */
+    .site-navigation {
+        padding-left: 0;
+    }
+}
+@media (max-width: 611px) {
+    /* header/nav */
+    .site-navigation {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .primary-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    #menu-item-224, #menu-item-id, #menu-item-223 {
+        margin: 10px;
+    }
+
+    #menu-item-id a {
+        margin-left: 0;
+    }
+    #menu-item-223 {
+        margin: 24px 0;
+        margin-left: 0;
+    }
+
+    #menu-item-223 a {
+        margin-left: 0;
+        padding: 30px 103px;
+    }
+    /* h1 boisson énergisante 100% naturelle */
+    h1 {
+        font-size: 30px !important;
+        line-height: 30px !important;
+    }
+}
+
+@media (max-width: 390px) {
+
+    h1 {
+        font-size: 24px !important;
+        line-height: 27px !important;
+    }
+    .plante {
+        top: 73px;
+    }
+    .energie-p {
+        font-size: 17px !important;
+        line-height: 22px !important;
+    }
+}

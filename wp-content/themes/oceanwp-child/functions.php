@@ -1,5 +1,6 @@
 <?php
 
+define("MENU", "primary");
 // require '/shortcode/banner.php';
 require __DIR__. '/shortcode/banner.php';
 // require '/shortcode/plante-contacter.php';
@@ -10,6 +11,8 @@ require __DIR__. '/shortcode/plante-rencontrer.php';
 require __DIR__. '/shortcode/plante-droite.php';
 // require '/shortcode/commande.php';
 require __DIR__. '/shortcode/commande.php';
+// require '/shortcode/equipe.php';
+require __DIR__. '/shortcode/equipe.php';
 
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) ) exit;
@@ -84,7 +87,7 @@ function order_custom_post_type() {
 		'menu_icon'           =>'dashicons-cart'
 	);
 	
-	// On enregistre notre custom post type qu'on nomme ici "serietv" et ses arguments
+	// On enregistre notre custom post type qu'on nomme ici "orders" et ses arguments
 	register_post_type( 'orders', $args );
 
 }
@@ -139,8 +142,21 @@ function form_custom_post_type() {
 
 add_action( 'init', 'form_custom_post_type', 0 );
 
+// charger feuille de style
+function my_register_styles() {
+    wp_register_style( 'style', __DIR__. '/style.css' );
+}
+
+//enqueue styles
+function my_enqueue_styles() {
+    wp_enqueue_style( 'style' );
+}
+
+add_action('init', 'my_register_styles');
+add_action( 'wp_enqueue_scripts', 'my_enqueue_styles' );
+
 // helper
-// la variable est egal a true ?
+// si la variable est egal a true, crée une image avec comme src et alt les données de la variable
 
 function dv($display) {
 	if (!$display) {return false;}
@@ -151,6 +167,21 @@ function dv($display) {
 		}
 	}
 	else {echo $display;}
+}
+
+function orderConfirmation($id, $email) {
+	// mail client
+	$subject = 'Confirmation de votre commande';
+	$body = 'résumé de la commande, merci de votre commande etc';
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+
+	wp_mail( $email, $subject, $body, $headers );
+
+	// mail administrateur
+	$admin_mail =get_bloginfo('admin_email');
+	$link = get_edit_post_link($id);
+
+	wp_mail( $admin_mail, "nouvelle commande sur Planty", "voici du texte blablabla " .$link. " encore du texte", $headers );
 }
 
 function createOrder($data) {
@@ -190,5 +221,18 @@ function createOrder($data) {
 	update_field('code_postal', $codepostal, $id);
 	update_field('ville', $ville, $id);
 
+	orderConfirmation($id, $email);
 	return $id;
 }
+
+// creation d'un lien si l'utilisateur est un admin
+add_filter( 'wp_nav_menu_items','create_admin_link', 10, 2);
+function create_admin_link( $items, $args ) {
+    if (current_user_can('manage_options') && $args->menu == MENU) {
+        $items .= '<li id="menu-item-id"><a href="'. get_admin_url() .'">Admin</a></li>';
+    }
+    return $items;
+}
+
+
+?>

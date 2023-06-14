@@ -1,0 +1,589 @@
+/******************************** header / nav ********************************/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* header icon */
+.left-nav img {
+    width: 200px;
+    height: 40px;
+}
+
+/* header nav */
+.site-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    height: 77px;
+}
+
+/* header ul container */
+.primary-menu {
+    display: flex;
+    flex-direction: row;
+    font-family: "Syne", sans-serif;
+}
+
+/* li "nous rencontrer" */
+#menu-item-224 a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: black;
+}
+
+/* li "commander */
+#menu-item-223 a {
+    color: white;
+    background-color: #DC9F96;
+    padding: 30px 60px 30px 60px;
+    margin-left: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+/* nous rencontrer / admin :hover */
+#menu-item-224 a:hover, #menu-item-id a:hover, #menu-item-235 a:hover{
+    font-size: 13px;
+    line-height: 15.6px;
+    font-weight: 700;
+    color: black;
+}
+
+a, a:focus{
+    -webkit-transition: none !important;
+    outline: none !important;
+}
+
+li {
+    list-style-type: none;
+}
+/* li admin */
+#menu-item-id a {
+    order: 2;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: black;
+    margin-left: 50px;
+}
+/* commander :hover */
+#menu-item-223 a:hover {
+    background-color: #C02E44;
+}
+
+/* gerer l'ordre des liens dans le header  */
+#menu-item-224 {
+    order: 1;
+}
+#menu-item-id {
+    order: 2;
+}
+#menu-item-223 {
+    order: 3;
+}
+/******************************** css de la bannière + animation  *********************************/
+.banner-container {
+    position: relative;
+    height: 700px;
+}
+
+.plante {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 140px;
+}
+
+img.canette {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) !important; 
+}
+/********************************* animation de la banniere *********************************/
+.slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    }
+    @keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+} 
+
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInRight {
+    0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    }
+    @keyframes slideInRight {
+    0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+}
+
+.slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInDown {
+    0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    }
+    @keyframes slideInDown {
+    0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    }
+    } 
+
+/********************************* décoration plante page de contacte (shortcode) *********************************/
+
+.planteRencontrer {
+    position: absolute;
+    left: -245px;
+    width: 180.3px;
+    top: -95px
+}
+
+.planteContacter {
+    position: absolute;
+    left: -69px;
+    top: 520px;
+    width: 147.32px;
+    height: 134.97px;
+}
+
+.planteDroite {
+    position: absolute;
+    width: 191.21px;
+    height: 219.08px;
+    bottom: -87px;
+    left: 98%
+}
+
+/********************************* page de commande *********************************/
+
+.commande-container {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.img-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img-text-container {
+    width: 192.53px;
+    height: 128.36px;
+}
+
+.img-text-container img {
+    width: 100%;
+}
+
+.img-text-container p {
+    word-break: normal;
+    position: absolute;
+    color: white;
+    margin: 0;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "syne", sans-serif;
+    text-align: center;
+    max-width: 100%;
+}
+/* style bouton d'incrementation TEMPORAIRE ! */
+    .all-button-container {
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
+    justify-content: space-between; 
+    margin-top: 14px;
+}
+
+.number-plus-minus-container{
+    position: relative; 
+    display: flex;
+}
+
+.number {
+    width: 51px; 
+    height: 55px; 
+    border-top-left-radius: 6px; 
+    border-bottom-left-radius: 6px; 
+    border: solid 1px #eee; 
+    background-color: white !important;
+}
+
+.plus-minus-container{
+    display: flex; 
+    flex-direction: column;
+}
+
+.plus {
+    background-color: #DC9F96; 
+    width: 36px; 
+    height: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 12px; 
+    color: #fff; 
+    font-weight: bold; 
+    border: solid 1px rgba(255,255,255,0.9); 
+    border-top-right-radius: 6px;
+}
+
+.minus {
+    background-color: #DC9F96; 
+    width: 36px; 
+    height: 50%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 16px; 
+    color: #fff; 
+    font-weight: bold; 
+    border: solid 1px rgba(255,255,255,0.9); border-bottom-right-radius: 6px;
+}
+
+.number-submit {
+    background-color: #e8a9a9 !important; 
+    border-radius: 6px; 
+    width: 100px; 
+    height: 55px; 
+    margin-left: 4px; 
+    border: none; 
+    color: #fff; 
+    font-weight: bold;
+}
+/* titre form precommande (votre commande / vos informations / livraison) */
+.form-title {
+    color: white;
+    font-family: "syne", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 45px 0 35px 0px;
+}
+
+form + h2 {
+    margin-left: 50px;
+}
+
+/* typographie label */
+.informations-Livraison label {
+    color: white;
+    font-family: "syne", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+
+/* visuel input text */
+.informations-Livraison input[type=text] {
+    background-color: white;
+    border-radius: 7px;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+}
+
+/* visuel input email */
+.informations-Livraison input[type=email] {
+    min-height: 40px;
+    padding: 6px 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    border-radius: 7px;
+    height: 70px;
+    width: 100%;
+}
+
+.informations-Livraison {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.informations form {
+    display: flex;
+    flex-direction: column;
+}
+
+.informations{
+    width: 380px;
+    margin-right: 45px;
+}
+
+.livraison form {
+    display: flex;
+    flex-direction: column;
+}
+
+.livraison {
+    width: 380px;
+    margin-left: 45px;
+}
+
+.order {
+    margin-left: 128px;
+}
+
+.order_button {
+    width: 200px;
+    height: 55px;
+    background-color: #E0B9B4 !important;
+    border-radius: 5px;
+    margin: 15px 50% 0 50% !important;
+    transform: translateX(-50%);
+    text-transform: none !important;
+}
+
+input[type="submit"]:hover {
+    background-color: #C02E44 !important;
+}
+
+div .bordure-horizontal{
+    border-bottom: 1px solid white;
+    height: 1px;
+    width: 77%;
+    top: 43px;
+    left: 128px;
+    position: relative;
+}
+
+div .bordure-vertical {
+    border-right: 1px solid white;
+    height: 416px;
+    top: 48px;
+    position: relative;
+    }
+
+/* visuel message de confimation/probleme dans la commande */
+.order-confirmation {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.order-confirmation p {
+    font-family: "syne", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+/********************************* l'équipe *********************************/
+
+/* section l'équipe */
+.equipe {
+    display: flex;
+    flex-direction: column;
+}
+/* titre de la section */
+.equipe h2 {
+    margin: 30px auto 50px auto;
+}
+.elementor-13 .elementor-element.elementor-element-c364ca1 > .elementor-widget-container {
+    margin: 110px 0 20px 0 !important;
+}
+.elementor-widget-wrap .equipe-text.elementor-widget{
+    margin-bottom: 10px;
+}
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* carte de chaque membres de l'equipe */
+.card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card img {
+    width: 167px;
+    height: 167px;
+}
+/* texte de chaque carte  */
+.card h3 {
+    font-family: "Syne", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 10px;
+}
+.card p {
+    font-family: "Syne", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+/********************************* formulaire "nous contacter" *********************************/
+
+/* typographie label */
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+    color: black;
+    font-family: "syne", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 13px;
+}
+
+/* visuel input text/email/textarea */
+div.wpforms-container-full .wpforms-form input[type=email],
+div.wpforms-container-full .wpforms-form input[type=text],   
+div.wpforms-container-full .wpforms-form textarea {
+    height: 70px;
+    border-radius: 7px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.04);
+    margin-bottom: 22px;
+    resize: none;
+}
+
+/* rendre invisible le * a coter des champs obligatoire */
+.wpforms-form .wpforms-required-label {
+    color: #ECE2DA !important;
+}
+
+/* visuel bouton submit */
+#wpforms-submit-164 {     
+    width: 200px;     
+    height: 55px;     
+    background-color: #E0B9B4 !important;     
+    border-radius: 5px;     
+    margin: 0px 50% 0 50% !important;     
+    transform: translateX(-50%);  
+}
+
+/* hover bouton sumbit */
+#wpforms-submit-164:hover {
+    background-color: #C02E44 !important;
+}
+
+/********************************* background row canettes *********************************/
+#bottom-background {
+    background-image: url("/wp-content/uploads/2023/04/background.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 131px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* ne pas faire apparaitre le background sur la page de commande */
+.page-id-15 #bottom-background {
+    display: none;
+}
+
+#main {
+    position: relative;
+}
+/********************************* footer *********************************/
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.menu-footer li a {
+    padding-left: 10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+

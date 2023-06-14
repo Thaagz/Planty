@@ -6,6 +6,8 @@
  */
 
 ?>
+<div id="bottom-background">
+</div>
 
 	</main><!-- #main -->
 
